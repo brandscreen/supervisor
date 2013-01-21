@@ -5,11 +5,13 @@ Maintainer: Anders Hammarquist <iko@debian.org>
 Build-Depends: debhelper (>= 7), python-setuptools (>= 0.6c7), python-support, python-all (>= 2.3.5-7)
 XS-Python-Version: >= 2.3
 Standards-Version: 3.8.3
-Homepage: http://supervisord.org/
+Homepage: https://github.com/brandscreen/supervisor
+Vcs-Git: https://github.com/brandscreen/supervisor.git
+X-Python-Version: >= 2.6.5
 
 Package: supervisor
 Architecture: all
-Depends: python (>= 2.3), python-medusa (>= 0.5.4), python-meld3, python-pkg-resources (>= 0.6c7), ${python:Depends}
+Depends: ${misc:Depends}, python (>= 2.3), python-medusa (>= 0.5.4), python-meld3, python-pkg-resources (>= 0.6c7), ${python:Depends}
 Description: A system for controlling process state
  Supervisor is a system for controlling and maintaining process state,
  similar to what init does, but not intended as an init replacement.
@@ -18,17 +20,3 @@ Description: A system for controlling process state
  need to be started and stopped in order, and it is possible to
  control individual process state via an rpc mechanism, thus allowing
  ordinary users to restart processes.
-Source: supervisor
-Section: python
-Priority: extra
-Maintainer: Seth Yates <syates@brandscreen.com>
-Build-Depends: debhelper (>= 7.0.0), python (>= 2.6.5)
-Standards-Version: 3.9.2
-Homepage: https://github.com/brandscreen/supervisor
-Vcs-Git: https://github.com/brandscreen/supervisor.git
-X-Python-Version: >= 2.6.5
-
-Package: supervisor
-Architecture: all
-Depends: ${misc:Depends}, ${python:Depends}, python (>= 2.6.5)
-Description: Supervisor is a client/server system that allows its users to control a number of processes on UNIX-like operating systems.
