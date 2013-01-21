@@ -1,0 +1,14 @@
+Source: supervisor
+Section: python
+Priority: extra
+Maintainer: Seth Yates <syates@brandscreen.com>
+Build-Depends: debhelper (>= 7.0.0), python (>= 2.6.5)
+Standards-Version: 3.9.2
+Homepage: https://github.com/brandscreen/supervisor
+Vcs-Git: https://github.com/brandscreen/supervisor.git
+X-Python-Version: >= 2.6.5
+
+Package: supervisor
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, python (>= 2.6.5)
+Description: Supervisor is a client/server system that allows its users to control a number of processes on UNIX-like operating systems.
