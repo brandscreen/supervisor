@@ -71,7 +71,9 @@ dist = setup(
     install_requires = requires,
     extras_require = {'iterparse':['cElementTree >= 1.0.2']},
     tests_require = ['mock >= 0.5.0'],
-    include_package_data = True,
+    package_data = {
+    '' : [ 'ui/*.html', 'ui/images/*', 'ui/stylesheets/*', 'version.txt' ],
+    },
     zip_safe = False,
     namespace_packages = ['supervisor'],
     test_suite = "supervisor.tests",
